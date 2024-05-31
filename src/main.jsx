@@ -9,9 +9,19 @@ const colors = {
     800: "#153e75",
     700: "#2a69ac",
   },
+  background: "#f3f2ef", // Add this line
 };
 
-const theme = extendTheme({ colors });
+const theme = extendTheme({
+  colors,
+  styles: {
+    global: {
+      body: {
+        bg: "background", // Apply the background color
+      },
+    },
+  },
+});
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
